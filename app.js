@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
    
     const day = date.getDate();
 
-    res.render("list", {listTitle: day, newListItems: items
+    res.render("list", {listTitle: day, newListItems: items.reverse()
     });
 
     console.log(items);
@@ -51,6 +51,18 @@ app.post("/work", (req, res) => {
     res.redirect("/work");
 
 })
+
+//  app.post("/delete", (req, res) => {
+//      const checkedbox = req.body.checkbox;
+//    items.findByIdAndDelete(checkedbox, (req, res) => {
+//        if (err) {
+//          console.log(err);
+//        } else {
+//           console.log("Deleted!");
+//          res.redirect("/");       }
+//       });
+//  })
+
 
 app.get("/about", (req, res) => {
     res.render("about");
