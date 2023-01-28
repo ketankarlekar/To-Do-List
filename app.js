@@ -52,17 +52,6 @@ app.post("/work", (req, res) => {
 
 })
 
-//  app.post("/delete", (req, res) => {
-//      const checkedbox = req.body.checkbox;
-//    items.findByIdAndDelete(checkedbox, (req, res) => {
-//        if (err) {
-//          console.log(err);
-//        } else {
-//           console.log("Deleted!");
-//          res.redirect("/");       }
-//       });
-//  })
-
 
 app.get("/about", (req, res) => {
     res.render("about");
